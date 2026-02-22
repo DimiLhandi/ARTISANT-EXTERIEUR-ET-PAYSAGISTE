@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  --color-primary: #4C6B3C;
+  --color-accent: #8C5A2B;
+  --color-bg-pale: #F5F8F2;
+  --color-text-deep: #1E2A1A;
+  
+  --radius-organic: 6px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-pale text-text-deep font-sans text-[14px] antialiased;
+  }
+  
+  h1, h2 {
+    @apply text-[53px] leading-tight font-bold tracking-tight text-text-deep;
+  }
+}
+
+.letter-spacing-tight {
+  letter-spacing: -0.02em;
+}
+
+.organic-shadow {
+  box-shadow: 0 4px 20px rgba(30, 42, 26, 0.05);
+}
+
+.organic-shadow-hover {
+  box-shadow: 0 10px 30px rgba(30, 42, 26, 0.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
